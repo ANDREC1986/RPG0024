@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'locationButton.dart';
+import 'location_button.dart';
 
 class LocationMenu extends StatelessWidget {
   @override

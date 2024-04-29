@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'screens/location.dart';
-import 'repositories/inMemoryDatabase.dart';
+import 'screens/home.dart';
+import 'repositories/in_memory_database.dart';
 
-void main() => runApp(
-  const MyApp()
-  );
+void main() => runApp(const MyApp());
 
 var database = InMemmoryDatabase();
 
@@ -16,15 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter layout demo',
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter layout demo'),
-        ),
-        body: ListView(
-          children: <Widget>[
-            Location()
-          ]
-        ),
+        body: ListView(children: <Widget>[
+          Home(),
+        ]),
       ),
     );
-  } 
+  }
 }
