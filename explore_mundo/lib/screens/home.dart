@@ -20,6 +20,10 @@ class Home extends StatelessWidget {
             itemBuilder: (context, index) {
               return Destaque(
                 imagePath: database.database[index].image,
+                nome: database.database[index].nome,
+                location: database.database[index].location,
+                index: index,
+                maxindex: database.database.length,
                 onPressed: () {
                   Navigator.push(
                       context,
