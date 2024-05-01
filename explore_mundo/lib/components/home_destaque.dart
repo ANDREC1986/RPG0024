@@ -1,3 +1,4 @@
+import 'package:explore_mundo/components/menu.dart';
 import 'package:flutter/material.dart';
 import './destaque_busca_form.dart';
 
@@ -94,7 +95,7 @@ class Destaque extends StatelessWidget {
               child: Opacity(
                   opacity: right_arrow,
                   child: Icon(Icons.arrow_forward_ios,
-                      size: 40, color: Colors.white)))
+                      size: 40, color: Colors.white))),
         ],
       ),
     );

@@ -21,33 +21,31 @@ class Busca extends StatelessWidget {
 
     if (resultado.isEmpty) {
       return (Scaffold(
-          body: Padding(
-              padding: EdgeInsets.only(top: 60),
-              child: Column(children: [
-                const Text('Resultado da Busca:',
-                    style: TextStyle(color: Colors.red, fontSize: 20)),
-                Container(
-                  padding: EdgeInsets.all(32),
-                  child: Text('Nenhum resultado encontrado'),
-                ),
-              ]))));
+          appBar: AppBar(),
+          body: Column(children: [
+            const Text('Resultado da Busca:',
+                style: TextStyle(color: Colors.red, fontSize: 20)),
+            Container(
+              padding: EdgeInsets.all(32),
+              child: Text('Nenhum resultado encontrado'),
+            ),
+          ])));
     } else {
       return (Scaffold(
-          body: Padding(
-              padding: EdgeInsets.only(top: 60),
-              child: Column(children: [
-                const Text('Resultado da Busca:',
-                    style: TextStyle(color: Colors.red, fontSize: 20)),
-                Expanded(
-                    child: Container(
-                        child: ListView.builder(
-                            itemCount: resultado.length,
-                            itemBuilder: (context, index) {
-                              return Container(
-                                  child: BuscaResultado(
-                                      location: resultado[index]));
-                            })))
-              ]))));
+          appBar: AppBar(),
+          body: Column(children: [
+            const Text('Resultado da Busca:',
+                style: TextStyle(color: Colors.red, fontSize: 20)),
+            Expanded(
+                child: Container(
+                    child: ListView.builder(
+                        itemCount: resultado.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                              child:
+                                  BuscaResultado(location: resultado[index]));
+                        })))
+          ])));
     }
   }
 }

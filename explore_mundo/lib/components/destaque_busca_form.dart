@@ -1,3 +1,4 @@
+import 'package:explore_mundo/components/menu.dart';
 import 'package:explore_mundo/screens/busca.dart';
 import 'package:flutter/material.dart';
 
@@ -29,19 +30,26 @@ class _BuscaFormState extends State<BuscaForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-            child: TextField(
-          controller: _controller,
-          decoration: const InputDecoration(hintText: 'Seu destino...'),
-        )),
-        IconButton(
-            onPressed: _buscar,
-            icon: const Icon(
-              Icons.search,
-            ))
-      ],
-    );
+    return Container(
+        height: 80,
+        child: Column(
+          children: [
+            Menu(),
+            Row(
+              children: [
+                Expanded(
+                    child: TextField(
+                  controller: _controller,
+                  decoration: const InputDecoration(hintText: 'Seu destino...'),
+                )),
+                IconButton(
+                    onPressed: _buscar,
+                    icon: const Icon(
+                      Icons.search,
+                    ))
+              ],
+            )
+          ],
+        ));
   }
 }
